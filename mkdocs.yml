@@ -1,0 +1,12 @@
+site_name: Wirewolves' Documentation
+site_url: https://docs.wirewolves.org
+nav:
+  - Home: index.md
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - java
+    - yaml
+plugins:
+  - git-revision-date-localized
