@@ -9,6 +9,7 @@ nav:
 plugins:
   - git-revision-date-localized
   - privacy
+  - search
 
 theme:
   name: material
