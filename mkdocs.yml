@@ -4,7 +4,11 @@ repo_url: https://github.com/wirewolves10679/Documentation
 edit_uri: edit/main/docs/
 nav:
   - Home: index.md
-  - About: about.md
+  - Electrical: electrical.md
+  - Hardware: hardware.md
+  - Marketing: marketing.md
+  - Safety: safety.md
+  - software: software.md
   
 plugins:
   - git-revision-date-localized
