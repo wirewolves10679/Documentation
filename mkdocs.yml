@@ -5,8 +5,9 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Electrical: electrical.md
+    - electrical/index.md
   - Hardware: hardware.md
-  - Marketing: marketing.md
+  - Business: business.md
   - Safety: safety.md
   - software: software.md
   
