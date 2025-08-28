@@ -51,8 +51,6 @@ theme:
   palette:
     # Automatic mode — now with team colors
     - media: "(prefers-color-scheme)"
-      primary: "#032057"
-      accent: "#032057"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
@@ -60,8 +58,6 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
-      primary: "#032057"
-      accent: "#032057"
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -69,8 +65,6 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: "#032057"
-      accent: "#032057"
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -91,12 +85,16 @@ nav:
   - Home: index.md
   - Business:
       - business/index.md
+      - test: business/business.md
   - Electrical:
       - electrical/index.md
       - test: electrical/electrical.md
   - Hardware:
       - hardware/index.md
+      - test: hardware/hardware.md
   - Safety:
       - safety/index.md
+      - test: safety/safety.md
   - Software:
       - software/index.md
+      - test: software/software.md
