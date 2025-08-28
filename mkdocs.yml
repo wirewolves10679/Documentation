@@ -2,10 +2,13 @@ site_name: Wirewolves' Documentation
 site_url: https://docs.wirewolves.org
 repo_url: https://github.com/wirewolves10679/Documentation
 edit_uri: edit/main/docs/
-nav:
-  - Home: index.md
-  - About: about.md
-  
+site_description: >-
+  Official documentation site of FRC Team 10679 Wirewolves.
+
+# copyright: >
+#   Copyright &copy; 2016 - 2024 Martin Donath –
+#   <a href="#__consent">Change cookie settings</a>
+
 plugins:
   - git-revision-date-localized
   - privacy
@@ -13,7 +16,6 @@ plugins:
 
 theme:
   name: material
-
   highlightjs: true
 
   hljs_languages:
@@ -21,49 +23,55 @@ theme:
     - yaml
   
   features:
+    - announce.dismiss
     - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
     - header.autohide
+    - navigation.footer
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.path
+    - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.tracking
     - offline
-    - toc.follow
-    - toc.integrate
     - search
     - search.boost
     - search.highlight
     - search.share
     - search.suggest
+    - toc.follow
 
   palette:
-    # Palette toggle for automatic mode
+    # Automatic mode — now with team colors
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
-    # Palette toggle for light mode
+    # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
+    # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
-  primary: custom
   
   icon:
-    repo: fontawesome/brands/github
     edit: material/pencil
+    repo: fontawesome/brands/github
     view: material/eye
 
 extra:
@@ -71,8 +79,22 @@ extra:
     provider: mike
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/colors.css
 
-# copyright: >
-#   Copyright &copy; 2016 - 2024 Martin Donath –
-#   <a href="#__consent">Change cookie settings</a>
+nav:
+  - Home: index.md
+  - Business:
+      - business/index.md
+      - test: business/business.md
+  - Electrical:
+      - electrical/index.md
+      - test: electrical/electrical.md
+  - Hardware:
+      - hardware/index.md
+      - test: hardware/hardware.md
+  - Safety:
+      - safety/index.md
+      - test: safety/safety.md
+  - Software:
+      - software/index.md
+      - test: software/software.md
