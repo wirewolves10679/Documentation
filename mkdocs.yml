@@ -97,4 +97,4 @@ nav:
       - test: safety/safety.md
   - Software:
       - software/index.md
-      - Git Training: software/git_training.md
+      - Training: software/git_training.md
