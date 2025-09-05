@@ -37,6 +37,8 @@ A version control system (VCS) tracks changes to files over time. It allows you 
 
 Git is also considered a software configuration management (SCM) tool. While “VCS” and “SCM” are often used interchangeably, SCM encompasses additional practices beyond version control. A VCS can be used for projects other than software, including books and online tutorials.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hwP7WQkmECE?si=o2ppTGeKTs58PUqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Basic Git Terminology
 - __Working tree__: The set of nested directories and files that contain the project that's being worked on.
 - __Repository (repo)__: The directory, located at the top level of a working tree, where Git keeps all the history and metadata for a project. Repositories are almost always referred to as repos. A bare repository is one that isn't part of a working tree; it's used for sharing or backup. A bare repo is usually a directory with a name that ends in .git (for example, project.git).
