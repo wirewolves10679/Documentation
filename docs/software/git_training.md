@@ -37,7 +37,9 @@ A version control system (VCS) tracks changes to files over time. It allows you 
 
 Git is also considered a software configuration management (SCM) tool. While “VCS” and “SCM” are often used interchangeably, SCM encompasses additional practices beyond version control. A VCS can be used for projects other than software, including books and online tutorials.
 
+<div align="center">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hwP7WQkmECE?si=o2ppTGeKTs58PUqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Basic Git Terminology
 - __Working tree__: The set of nested directories and files that contain the project that's being worked on.
