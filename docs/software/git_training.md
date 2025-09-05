@@ -14,6 +14,7 @@ winget install --id Git.Git -e --source winget
 ```
 
 GUI:
+
 - Download and execute the [Git](https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe) installer.
 
 ### For Linux
