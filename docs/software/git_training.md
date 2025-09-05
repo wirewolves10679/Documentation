@@ -84,8 +84,8 @@ git commit -am "<commit message>"
 In Git, staging is the step between making changes in your working directory and recording them in the repository’s history with a commit.  It gives you the power to choose what files you want to commit.  In this case we are staging all files that have changes made using the `-a` switch.  The `-m` specifies that you want to pass a commit message.
 
 ### Branches
-![Github Workflow](../assets/imgs/image.png)
-When working on a project, a best practice is to track each new feature or fix in its own **branch**.  Branches allow multiple versions of the code to exist in parallel, so you can develop without interfering with the main codebase or other people’s work.
+When working on a project, a best practice to follow is to track each new feature or fix in its own branch.  Branches allow multiple versions of the code to exist in parallel, so you can develop without interfering with the main codebase or other people’s work.  The `main` is typically the production ready code while other branches are for development.
+![Github Branches](../assets/imgs/git_branches.png)
 
 See what branches already exist
 ```
@@ -104,17 +104,23 @@ git status
 ```
 
 ## Repository Hosting
+GitHub, GitLab, and Bitbucket are cloud-based platforms for hosting Git repositories. They simplify collaboration by providing:
 
-## 
-GitHub, Gitlab, & Bitbucket are cloud platforms that host your git repository. These simplifies the processes of collaborating by providing shared code storage, web interfaces, command‑line tools, and built‑in workflows.
+- Centralized, shared code storage  
+- Web-based interfaces for browsing and managing code  
+- Command‑line integration  
+- Built‑in workflows for issues, pull requests, and CI/CD
 
-Let's add our project to github.
+### Adding Your Project to GitHub
+First we need to create a Repository on Github.
 
-- Go to [GitHub](https://github.com) and sign in
-- Click New (top‑right) -> fill in the repo name, description, visibility
-- Do not initialize with a README, .gitignore, or license (since you already have a local repo)
-- Click Create repository
+- Go to [github.com](https://github.com) and log in to your account.
+- Click the plus icon in the top right corner then select `New repository`  
+- Enter a repository name, description, and choose visibility (public or private)  
+- Make sure not to initialize the repository with a README, `.gitignore`, or license since you already have a local repository  
+- Click `Create repository`
 
+Now we can link the local repository to GitHub
 ```
 git remote add origin https://github.com/<your-username>/<repo-name>.git
 ```
@@ -124,25 +130,41 @@ Verify
 git remote -v
 ```
 
-Now make a change and commit.
-
-The change will not show up in github until you push your commits to github that can be done with
+Github will only reflect changes after you push commits
 ```
 git push -u origin <branch>
 ```
-The -u (or --set-upstream) flag tells Git to remember the remote/branch pair
+
+The -u (or --set-upstream) flag tells Git to remember the remote/branch pairing, so future pushes can be done with just:
+```
+git push
+```
 
 ### Creating a Pull Request
+After finishing changes on a branch, you create a pull request(PR) to propose merging those changes into the destination branch. This allows team members to review the code, discuss improvements, and approve it before it becomes part of the main codebase.
 
-- Go to [GitHub](https://github.com) and navigate to your repository.
-- Switch to the branch that contains the changes you want to merge.
-- If your branch is ahead of `main`, GitHub will display a banner such as:  
-   `This branch is X commits ahead of main`  
-   with a `Contribute` dropdown.
-- Click `Contribute` -> `Open pull request`.
-- Add a clear, descriptive title and a brief explanation of the changes in the description field.
-- Review the comparison to ensure the correct base branch (e.g., `main`) and compare branch are selected.
-- Click __Create pull request__ to submit it for review.
+- Go to [GitHub](https://github.com) and navigate to the repository containing your changes 
+- Select the branch that contains the updates you want to merge into `main`
+- If your branch is ahead of `main`, you’ll see a banner such as:  
+   `This branch is X commits ahead of main` along with a `Contribute` dropdown
+- Click `Contribute` -> `Open pull request`
+- Enter a clear, descriptive title.  
+- Provide a brief but informative description of the changes
+- Confirm that the destination branch (e.g., `main`) and the compare branch (your feature branch) are correct.
+- Click `Create pull request` to send it for review.
+
+### Merging a Pull Request
+If you were a reviewer or approver for a pull request these are the general steps you would want to take.
+
+- Go to your repository on [GitHub](https://github.com) and click the pull request you want to merge
+- Check the `Files changed` tab to verify the updates are correct and meet project standards
+- Ensure all required checks (e.g., automated tests, code reviews) have passed if any.
+- Click the `Merge pull request` button and select your preferred method:  
+   `Create a merge commit`: Keeps full history with a merge commit  
+   `Squash and merge`: Combines all commits into one before merging  
+   `Rebase and merge`: Reapplies commits on top of the base branch without a merge commit
+- Click `Confirm merge` to complete the process. 
+- After merging, you can delete the feature branch to keep the repository clean. GitHub will show a `Delete branch` button if this option is available.
 
 ## References
 - [DevMountain](https://github.com/DevMountain/learn-git)
