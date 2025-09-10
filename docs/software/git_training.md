@@ -77,7 +77,9 @@ git init -b main
 ```
 
 ### Staging & Committing Changes
-Now that our repository is set up, let’s create a file and commit it so we can see the process in action.
+The staging area (also called the index) is like a holding zone between your working directory (where you make changes) and the repository’s history (where commits live). When you edit files, Git doesn’t automatically commit them. Instead, you stage the changes you want to include in your next commit. This gives you fine-grained control over what gets committed and when.
+
+Now that our repository is set up, let’s create a file, stage, & commit it so we can see the process in action.
 
 - Create a new file in your project folder (for example, `hello.txt`) and add some content to it
 - Stage and commit your changes in one step using:
@@ -86,7 +88,7 @@ Now that our repository is set up, let’s create a file and commit it so we can
 git commit -am "<commit message>"
 ```
 
-In Git, staging is the step between making changes in your working directory and recording them in the repository’s history with a commit.  It gives you the power to choose what files you want to commit.  In this case we are staging all files that have changes made using the `-a` switch.  The `-m` specifies that you want to pass a commit message.
+In this case we are staging all files that have changes made using the `-a` switch.  The `-m` specifies that you want to pass a commit message.
 
 ### Branches
 When working on a project, a best practice to follow is to track each new feature or fix in its own branch.  Branches allow multiple versions of the code to exist in parallel, so you can develop without interfering with the main codebase or other people’s work.  The `main` is typically the production ready code while other branches are for development.
